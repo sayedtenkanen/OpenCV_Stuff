@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.0.0)
+project(MotionTracking VERSION 0.1.0)
+set (CMAKE_CXX_STANDARD 11)
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+add_executable(MotionTracking main.cpp)
+target_link_libraries(MotionTracking ${OpenCV_LIBS})
